@@ -5,8 +5,7 @@ export function getCountries() {
         throw new Error('Trailer not found.')
       }
       return response.json()
-    })    
-    .then(data => console.log(data))
+    })
   }
 
   export function getCountryHolidays() {
@@ -16,8 +15,7 @@ export function getCountries() {
         throw new Error('Country not found.')
       }
       return response.json()
-    })    
-    .then(data => console.log(data))
+    })
   } 
 
 
