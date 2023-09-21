@@ -1,31 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
 import { getCountries, getCountryHolidays } from './api';
+import { useState, useEffect } from 'react';
 
 function App() {
 
-  getCountries()
+  const [countries, setCountries] = useState('')
 
-  getCountryHolidays()
+  useEffect(() => {
+    getCountries()
+      .then(data => {
+        setCountries(data)
+      })
+  })
+
+  const codes = () => {
+    {countries.map((country) => {
+      return country
+    })}
+  }
 
 
   return (
     <div className="App">
-      <img src='https://flagsapi.com/BE/flat/64.png' />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
     </div>
   );
 }
