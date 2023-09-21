@@ -1,9 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { getCountries, getCountryHolidays } from './api';
 
 function App() {
+
+  getCountries()
+
+  getCountryHolidays()
+
+
   return (
     <div className="App">
+      <img src='https://flagsapi.com/BE/flat/64.png' />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
