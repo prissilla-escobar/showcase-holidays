@@ -1,0 +1,25 @@
+.SJ-country-flag {
+    height: 45px;
+}
+
+.countries-container {
+  padding: 12vh;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+}
+
+.country-card {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.country-card:hover {
+  transform: scale(1.18);
+}
+
+h2 {
+  margin: 5px;
+}
