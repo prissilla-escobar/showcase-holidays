@@ -574,7 +574,7 @@ export const countryFlags =
         id: 96,
         countryCode: "SJ",
         name: "Svalbard and Jan Mayen",
-        imageURL: "https://www.countryflagicons.com/FLAT/64/SJ.png"
+        imageURL: "https://flagpedia.net/data/flags/w580/sj.png"
     },
     {
         id: 97,
