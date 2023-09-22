@@ -39,18 +39,13 @@ main {
     border-radius: .5em;
 }
 
-.close {
-    margin-right: 12em;
-    margin-top: .5em;
-    cursor: pointer;
-}
-
 .add {
     margin-top: .6em;
     cursor: pointer;
+    margin-left: 15em;
 }
 
-.add:hover, .close:hover {
+.add:hover {
     transform: scale(1.19);
 }
 
