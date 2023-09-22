@@ -1,10 +1,16 @@
 .App {
   text-align: center;
   color: white;
+  height: 85%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body, html {
+body, html, #root {
   height: 100%;
   width: 100%;
   background-color: rgb(69, 205, 207);
+}
+
+a {
+  text-decoration: none;
 }
