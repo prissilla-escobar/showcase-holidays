@@ -1,0 +1,13 @@
+header {
+  height: 10%;
+  background-color: rgb(84, 182, 182);
+  margin: 0;
+  display: flex;
+  cursor: pointer;
+}
+
+h1 {
+  color: white;
+  width: 100%;
+  margin-left: 38%;
+}
