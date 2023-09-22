@@ -1,5 +1,5 @@
 import './SelectedCountry.css'
-import { Link, useParams} from 'react-router-dom'
+import { Link, useNavigate, useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getCountryHolidays } from '../../api'
 import { countryFlags } from '../../countryEmoji'
@@ -13,6 +13,7 @@ function SelectedCountry() {
     const {countryCode} = useParams()
     const [serverError, setServerError] = useState({hasError: false, message: ''})
     const dayjs = require('dayjs')
+    const navigate = useNavigate()
 
     useEffect(() => {
         getCountryHolidays(countryCode)
@@ -24,7 +25,11 @@ function SelectedCountry() {
             .catch(error => setServerError({hasError: true, message: `${error.message}`}))
     }, [countryCode])
 
-    const selectedFlag = countryFlags.find(country => country.countryCode === countryCode)
+    const selectedFlag = countryFlags && countryFlags.find(country => country.countryCode === countryCode)
+    if (!selectedFlag) {
+        navigate('*')
+    }
+    
     const holidayInfo = holidays.map(holiday => {
         return (
             <div className='holiday-card' key={`${holiday.localName}-${holiday.date}`}>
@@ -42,8 +47,8 @@ function SelectedCountry() {
         <main>
         <div className="selected-country-container">
             <div className="name-flag">
-                <h2 className="country-names">{`${selectedFlag.name}`}</h2>
-                <img className={`country-flag`} src={`${selectedFlag.imageURL}`} alt={`image of ${selectedFlag.name}'s flag`} />
+                <h2 className="country-names">{`${selectedFlag?.name}`}</h2>
+                <img className={`country-flag`} src={`${selectedFlag?.imageURL}`} alt={`image of ${selectedFlag?.name}'s flag`} />
             </div>
             <div className='holiday-list'>
                     {holidayInfo}
