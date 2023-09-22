@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react'
 import { getCountryHolidays } from '../../api'
 import { countryFlags } from '../../countryEmoji'
 import backButton from '../../Assets/back-button.png'
-import close from '../../Assets/close.png'
 import add from '../../Assets/travel.png'
+import TrackedHolidays from '../TrackedHolidays/TrackedHolidays'
 
 function SelectedCountry() {
     const [selectedCountry, setSelectedCountry] = useState(false)
@@ -45,19 +45,19 @@ function SelectedCountry() {
 
     return (
         <main>
-        <div className="selected-country-container">
-            <div className="name-flag">
-                <h2 className="country-names">{`${selectedFlag?.name}`}</h2>
-                <img className={`country-flag`} src={`${selectedFlag?.imageURL}`} alt={`image of ${selectedFlag?.name}'s flag`} />
+            <div className="selected-country-container">
+                <div className="name-flag">
+                    <h2 className="country-names">{`${selectedFlag?.name}`}</h2>
+                    <img className={`country-flag`} src={`${selectedFlag?.imageURL}`} alt={`image of ${selectedFlag?.name}'s flag`} />
+                </div>
+                <div className='holiday-list'>
+                        {holidayInfo}
+                </div>
+                <Link to={`/`}>
+                <img className='back-button' alt='back button' src={backButton}></img>
+                </Link>
+                <TrackedHolidays trackedHolidays={trackedHolidays} />
             </div>
-            <div className='holiday-list'>
-                    {holidayInfo}
-            </div>
-            <Link to={`/`}>
-              <img className='back-button' alt='back button' src={backButton}></img>
-            </Link>
-            <TrackedHolidays favorites={favorites} />
-        </div>
         </main>
     )
 }
