@@ -12,6 +12,7 @@ function SelectedCountry() {
     const [holidays, setHolidays] = useState([])
     const {countryCode} = useParams()
     const [serverError, setServerError] = useState({hasError: false, message: ''})
+    const [trackedHolidays, setTrackedHolidays] = useState([])
     const dayjs = require('dayjs')
     const navigate = useNavigate()
 
@@ -33,7 +34,6 @@ function SelectedCountry() {
     const holidayInfo = holidays.map(holiday => {
         return (
             <div className='holiday-card' key={`${holiday.localName}-${holiday.date}`}>
-                 <img className='close' alt='remove from tracker button' src={close} />
                  <img className='add' alt='add to tracker button' src={add} />
                  <h3>Country: {selectedFlag.name}</h3>
                 <h3>Holiday Name: {holiday.name}</h3>
@@ -56,6 +56,7 @@ function SelectedCountry() {
             <Link to={`/`}>
               <img className='back-button' alt='back button' src={backButton}></img>
             </Link>
+            <TrackedHolidays favorites={favorites} />
         </div>
         </main>
     )
