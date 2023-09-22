@@ -1,0 +1,66 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.selected-country-container {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-flag {
+    height: 5em;
+}
+
+.country-names {
+    font-size: 4.5em;
+    margin-right: .4em;
+    margin-bottom: .4em;
+    margin-top: .4em;
+}
+
+.holiday-list {
+  padding: 2vh;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.holiday-card {
+    border: 3px solid white;
+    border-radius: .5em;
+}
+
+.close {
+    margin-right: 12em;
+    margin-top: .5em;
+    cursor: pointer;
+}
+
+.add {
+    margin-top: .6em;
+    cursor: pointer;
+}
+
+.add:hover, .close:hover {
+    transform: scale(1.19);
+}
+
+.back-button {
+    height: 4em;
+    cursor: pointer;
+    transition: transform .5s;
+    margin-bottom: 2em;
+}
+
+.back-button:hover {
+    transform: scale(1.18);
+}
