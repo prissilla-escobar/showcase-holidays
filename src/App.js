@@ -6,6 +6,7 @@ import AllCountries from './Components/AllCountries/AllCountries'
 import Header from './Header/Header'
 import SelectedCountry from './Components/SelectedCountry/SelectedCountry'
 import Error from './Components/ServerError/ServerError'
+import TrackedHolidays from './Components/TrackedHolidays/TrackedHolidays'
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Routes>
           <Route path='/' element={<AllCountries countries={countries} />} />
           <Route path='/2023/:countryCode' element={<SelectedCountry />} />
+          <Route path='/trackedHolidays' element={<TrackedHolidays />} />
           <Route path='*' element={<Error message={{message: "The page you're looking for doesn't exist."}} resetError={resetError} />} />
         </Routes>
         )}
