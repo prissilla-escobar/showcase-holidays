@@ -28,10 +28,9 @@ function SelectedCountry() {
     const holidayInfo = holidays.map(holiday => {
         return (
             <div className='holiday-card' key={`${holiday.localName}-${holiday.date}`}>
-                {/* <div className='add-delete'> */}
                  <img className='close' alt='remove from tracker button' src={close} />
                  <img className='add' alt='add to tracker button' src={add} />
-                {/* <div/> */}
+                 <h3>Country: {selectedFlag.name}</h3>
                 <h3>Holiday Name: {holiday.name}</h3>
                 <h4>Local Name: {holiday.localName}</h4>
                 <h4>Date: {dayjs(holiday.date).format('MM/DD/YYYY')}</h4>
