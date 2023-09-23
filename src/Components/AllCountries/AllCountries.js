@@ -1,7 +1,6 @@
-import Card from "../CountryCard/CountryCard";
+import Card from "../CountryCard/CountryCard"
 import './AllCountries.css'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
 function AllCountries({countries}) {
 
@@ -26,6 +25,11 @@ function AllCountries({countries}) {
 
 export default AllCountries
 
-AllCountries.propTypes = {
-    countries: PropTypes.array.isRequired,
+  AllCountries.propTypes = {
+    countries: PropTypes.arrayOf(
+      PropTypes.shape({
+        countryCode: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   }

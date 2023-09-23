@@ -2,6 +2,7 @@ import './TrackedHolidays.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import { countryFlags } from '../../countryEmoji'
 import close from '../../Assets/close.png'
+import PropTypes from 'prop-types'
 
 function TrackedHolidays({ trackedHolidays, countries, removeTracked }) {
     console.log("HERE", countries)
@@ -35,3 +36,24 @@ function TrackedHolidays({ trackedHolidays, countries, removeTracked }) {
 }
 
 export default TrackedHolidays
+
+TrackedHolidays.propTypes = {
+    trackedHolidays: PropTypes.arrayOf(
+      PropTypes.shape({
+        countryCode: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        localName: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        fixed: PropTypes.bool,
+        global: PropTypes.bool,
+        launchYear: PropTypes.number,
+      })
+    ).isRequired,
+    countries: PropTypes.arrayOf(
+      PropTypes.shape({
+        countryCode: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    removeTracked: PropTypes.func.isRequired,
+  }

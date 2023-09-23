@@ -60,4 +60,4 @@ const removeTracked = (id) => {
   )
 }
 
-export default App;
+export default App

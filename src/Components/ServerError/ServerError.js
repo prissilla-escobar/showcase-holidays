@@ -1,7 +1,8 @@
 import './ServerError.css'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-function Error({ resetError, message}) {
+function Error({ resetError, message }) {
     
     return (
         <div className='error-message'>
@@ -24,3 +25,10 @@ function Error({ resetError, message}) {
 }
 
 export default Error
+
+Error.propTypes = {
+    resetError: PropTypes.func.isRequired,
+    message: PropTypes.shape({
+        message: PropTypes.string.isRequired,
+      }).isRequired
+}
