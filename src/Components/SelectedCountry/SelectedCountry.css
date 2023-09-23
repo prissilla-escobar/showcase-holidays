@@ -59,3 +59,9 @@ main {
 .back-button:hover {
     transform: scale(1.18);
 }
+
+span {
+    align-items: right ;
+    display: flex;
+    flex-direction: row-reverse;
+}
