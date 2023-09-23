@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { countryFlags } from '../../countryEmoji'
 
-function Card({id, countryName, countryCode}) {
+function Card({countryName, countryCode}) {
 
     const individualFlag = countryFlags.find(country => {
         if (country.name === countryName) {
@@ -24,3 +24,8 @@ function Card({id, countryName, countryCode}) {
 }
 
 export default Card
+
+Card.propTypes = {
+    countryName: PropTypes.string.isRequired,
+    countryCode: PropTypes.string.isRequired
+}
