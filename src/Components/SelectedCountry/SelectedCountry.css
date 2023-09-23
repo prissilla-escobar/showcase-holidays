@@ -42,7 +42,7 @@ main {
 .add {
     margin-top: .6em;
     cursor: pointer;
-    margin-left: 15em;
+    margin-left: 10em;
 }
 
 .add:hover {
@@ -65,3 +65,4 @@ span {
     display: flex;
     flex-direction: row-reverse;
 }
+
