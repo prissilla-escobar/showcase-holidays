@@ -3,31 +3,7 @@ main {
     justify-content: center;
 }
 
-.selected-country-container {
-    height: 90%;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-}
-
-.name-flag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.country-flag {
-    height: 5em;
-}
-
-.country-names {
-    font-size: 4.5em;
-    margin-right: .4em;
-    margin-bottom: .4em;
-    margin-top: .4em;
-}
-
-.holiday-list {
+.tracked-container {
   padding: 2vh;
   display: grid;
   grid-gap: 2em;
@@ -42,7 +18,7 @@ main {
 .close {
     margin-top: .6em;
     cursor: pointer;
-    margin-left: 15em;
+    margin-left: 12em;
 }
 
 .close:hover {
@@ -53,6 +29,20 @@ span {
     align-items: right ;
     display: flex;
     flex-direction: row-reverse;
+}
+
+.no-tracked {
+    display: flex;
+    justify-content: center;
+}
+
+.no-tracked-text {
+    font-size: 2em;
+    margin-top: 4em;
+}
+
+.tracked-country-flag {
+    height: 2.5em;
 }
 
   @media screen and (max-width: 400px) {
