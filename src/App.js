@@ -12,6 +12,7 @@ function App() {
 
   const [countries, setCountries] = useState([])
   const [serverError, setServerError] = useState({hasError: false, message: ''})
+  const [trackedHolidays, setTrackedHolidays] = useState(JSON.parse(localStorage.getItem('trackedHolidays')) || [])
 
   useEffect(() => {
     getCountries()
@@ -23,8 +24,20 @@ function App() {
       })
   }, [])
 
+  useEffect(() => {
+    localStorage.setItem('trackedHolidays', JSON.stringify(trackedHolidays))
+    }, [trackedHolidays])
+
   const resetError = () => {
     setServerError({hasError: false, message: ''})
+  }
+
+  const addToTracked = (holiday) => {
+    setTrackedHolidays([...trackedHolidays, holiday])
+  }
+
+const removeTracked = (id) => {
+    const filteredDays = trackedHolidays.filter(holiday => holiday.id !== id)
   }
 
   return (
@@ -38,8 +51,8 @@ function App() {
         ) : (
         <Routes>
           <Route path='/' element={<AllCountries countries={countries} />} />
-          <Route path='/2023/:countryCode' element={<SelectedCountry />} />
-          <Route path='/trackedHolidays' element={<TrackedHolidays />} />
+          <Route path='/2023/:countryCode' element={<SelectedCountry addToTracked={addToTracked} trackedHolidays={trackedHolidays} />} />
+          <Route path='/trackedHolidays' element={<TrackedHolidays countries={countries} trackedHolidays={trackedHolidays} removeTracked={removeTracked} />} />
           <Route path='*' element={<Error message={{message: "The page you're looking for doesn't exist."}} resetError={resetError} />} />
         </Routes>
         )}
