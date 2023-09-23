@@ -39,12 +39,14 @@ function App() {
     } else {
       setTrackedHolidays([...trackedHolidays, holiday])
     }
-
   }
 
-const removeTracked = (holiday) => {
-  const filtered= trackedHolidays.filter(filteredDay => filteredDay.localName !== holiday.localName && filteredDay.date !== holiday.date)
-  setTrackedHolidays(filtered)
+  const removeTracked = (holiday) => {
+    const filtered= trackedHolidays.filter(filteredDay => {
+    const check = filteredDay.localName === holiday.localName && filteredDay.date === holiday.date
+    return !check
+    })
+    setTrackedHolidays(filtered)
   }
 
   return (
