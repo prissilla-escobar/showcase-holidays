@@ -42,3 +42,46 @@ h1 {
 .track-button:hover, .home-button:hover {
   border: 1.5px solid white;
 }
+
+@media screen and (max-width: 675px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    margin-left: 0%;
+  }
+
+  .home-button {
+    margin-left: 1.5em;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0%;
+  }
+
+  h1, .home-button, .track-button {
+    margin-left: 0%;
+  }
+
+  .home-button {
+    margin-top: 1em;
+  }
+
+  .countries-container {
+    padding: 5em;
+  }
+}
