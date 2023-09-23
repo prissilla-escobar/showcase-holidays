@@ -1,6 +1,7 @@
 import './SelectedCountry.css'
 import { Link, useNavigate, useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { getCountryHolidays } from '../../api'
 import { countryFlags } from '../../countryEmoji'
 import backButton from '../../Assets/back-button.png'
@@ -29,10 +30,9 @@ function SelectedCountry({ addToTracked, trackedHolidays }) {
     if (!selectedFlag) {
         navigate('*')
     }
-
-    
     
     const holidayInfo = holidays.map(holiday => {
+
         return (
             <div className='holiday-card' key={`${holiday.localName}-${holiday.date}`} id={Date.now()}>
                  {trackedHolidays.includes(holiday) ? (
@@ -59,7 +59,7 @@ function SelectedCountry({ addToTracked, trackedHolidays }) {
                     {holidayInfo}
                 </div>
                 <Link to={`/`}>
-                <img className='back-button' alt='back button' src={backButton}></img>
+                    <img className='back-button' alt='back button' src={backButton}></img>
                 </Link>
             </div>
         </main>
@@ -67,3 +67,18 @@ function SelectedCountry({ addToTracked, trackedHolidays }) {
 }
 
 export default SelectedCountry
+
+SelectedCountry.propTypes = {
+    addToTracked: PropTypes.func.isRequired,
+    trackedHolidays: PropTypes.arrayOf(
+        PropTypes.shape({
+            countryCode: PropTypes.string.isRequired,
+            date: PropTypes.string.isRequired,
+            localName: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            fixed: PropTypes.bool,
+            global: PropTypes.bool,
+            launchYear: PropTypes.number,
+        })
+    )
+}
