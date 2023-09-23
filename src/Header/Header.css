@@ -1,13 +1,44 @@
 header {
   height: 10%;
+  width: 100%;
   background-color: rgb(84, 182, 182);
   margin: 0;
   display: flex;
-  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
   color: white;
   width: 100%;
   margin-left: 38%;
+  cursor: pointer;
+}
+
+.buttons {
+  display:flex;
+  flex-direction: row-reverse;
+  border: none;
+  margin-right: 9%;
+}
+
+.plane-pic, .home {
+  height: 2em;
+  margin-left: .3em;
+}
+
+.track-button, .home-button {
+  cursor: pointer;
+  margin-left: 2em;
+  color: white;
+  background-color: rgba(56, 56, 56, 0.461);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border: none;
+  height: 3em;
+}
+
+.track-button:hover, .home-button:hover {
+  border: 1.5px solid white;
 }

@@ -39,25 +39,14 @@ main {
     border-radius: .5em;
 }
 
-.add {
+.close {
     margin-top: .6em;
     cursor: pointer;
     margin-left: 15em;
 }
 
-.add:hover {
+.close:hover {
     transform: scale(1.19);
-}
-
-.back-button {
-    height: 4em;
-    cursor: pointer;
-    transition: transform .5s;
-    margin-bottom: 2em;
-}
-
-.back-button:hover {
-    transform: scale(1.18);
 }
 
 span {

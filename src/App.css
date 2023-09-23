@@ -6,7 +6,7 @@
 }
 
 body, html, #root {
-  height: 100%;
+  position: absolute;
   width: 100%;
   background-color: rgb(69, 205, 207);
 }
