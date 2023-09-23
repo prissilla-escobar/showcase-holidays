@@ -6,7 +6,6 @@ import { getCountryHolidays } from '../../api'
 import { countryFlags } from '../../countryEmoji'
 import backButton from '../../Assets/back-button.png'
 import add from '../../Assets/travel.png'
-import TrackedHolidays from '../TrackedHolidays/TrackedHolidays'
 
 function SelectedCountry({ addToTracked, trackedHolidays }) {
     const [selectedCountry, setSelectedCountry] = useState(false)
@@ -34,13 +33,13 @@ function SelectedCountry({ addToTracked, trackedHolidays }) {
     const holidayInfo = holidays.map(holiday => {
 
         return (
-            <div className='holiday-card' key={`${holiday.localName}-${holiday.date}`} id={Date.now()}>
+            <div className='holiday-card' key={`${holiday.localName}-${holiday.date}`}>
                  {trackedHolidays.includes(holiday) ? (
-                <span>Tracked ✅</span>
+                <span onClick={() => addToTracked(holiday)}>Tracked ✅ <br />Remove🗑️</span>
                 ) : (
                  <img className='add' alt='add to tracker button' src={add} onClick={() => addToTracked(holiday)} />
                 )}
-                 <h3>Country: {selectedFlag.name}</h3>
+                <h3>Country: {selectedFlag.name}</h3>
                 <h3>Holiday Name: {holiday.name}</h3>
                 <h4>Local Name: {holiday.localName}</h4>
                 <h4>Date: {dayjs(holiday.date).format('MM/DD/YYYY')}</h4>
