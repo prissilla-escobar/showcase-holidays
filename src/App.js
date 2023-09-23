@@ -33,11 +33,18 @@ function App() {
   }
 
   const addToTracked = (holiday) => {
-    setTrackedHolidays([...trackedHolidays, holiday])
+    if(trackedHolidays.includes(holiday)) {
+      const filteredDays = trackedHolidays.filter(filteredHoliday => filteredHoliday.localName !== holiday.localName && filteredHoliday.date !== holiday.date)
+      setTrackedHolidays(filteredDays)
+    } else {
+      setTrackedHolidays([...trackedHolidays, holiday])
+    }
+
   }
 
-const removeTracked = (id) => {
-    const filteredDays = trackedHolidays.filter(holiday => holiday.id !== id)
+const removeTracked = (holiday) => {
+  const filtered= trackedHolidays.filter(filteredDay => filteredDay.localName !== holiday.localName && filteredDay.date !== holiday.date)
+  setTrackedHolidays(filtered)
   }
 
   return (
