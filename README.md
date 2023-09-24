@@ -21,7 +21,7 @@ Easily view public holidays from 110 countries! Add holidays to your tracked pag
 
 - Node.js v14 or newer
 - TypeScript v4 or newer
-- An internet connection for fetching team data.
+- An internet connection for fetching data.
 
 ## Technologies
 - React
