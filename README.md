@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Public Holidays Around the world
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Easily view public holidays from 110 countries! Add holidays to your tracked page if you want to save the information for later.
 
-## Available Scripts
+## Deployed Link
+[Holidays Around the World](https://showcase-holidays.vercel.app/)
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Explore and Track Holidays Around the World](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzN0bGFwdHA0N2RwdmhvemtjZGM1dDM2YzJlanE3cXE3ejVkaml5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EZ5mCzmcWdU6TQYaJI/giphy.gif)
+![Error Handling](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa29vaHdmcHZ4azBkbjFvdXowMm54OTNnOWd0cmdzaGVwN2tvMDFyZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RHffgytZuh97hDikI4/giphy.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+- **110 Countries**: Browse through 110 countries and all of their public holidays.
+- **User Tracker**: User can ad/remove selected holiday that will populate on a separate 'tracked holidays' page.
+- **Responsive UI**: Designed to be mobile-friendly and accessible on all devices.
+- **Regular Updates**: Countries and holidays are regularly updated to reflect the latest changes through a public API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+- Node.js v14 or newer
+- TypeScript v4 or newer
+- An internet connection for fetching team data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Testing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app uses Cypress for end-to-end testing to ensure all functionalities are working as expected. There are tests available for:
+- Displaying all countries
+- Displaying individual country and their holidays
+- Displaying all tracked holidays that user adds
+- Addition/Removal of tracked holidays by user
+- Handling several types of errors appropriately
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+1. Clone the repository to your local machine.
+2. Install the required dependencies by running `npm install`.
+3. Start the development server using `npm start`.
+4. To run tests, use `npm run cypress`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Creator
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Prissilla Escobar**
+- [LinkedIn](https://www.linkedin.com/in/prissilla-escobar-a921b2279/)
+- [GitHub](https://github.com/prissilla-escobar)
