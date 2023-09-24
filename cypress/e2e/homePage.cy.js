@@ -50,12 +50,18 @@ describe('home page user flow', () => {
   })
 
   it('should update url to clicked country details', () => {
+    cy.intercept('GET', 'https://date.nager.at/api/v3/PublicHolidays/2023/AD', {
+        statusCode: 200,
+    })
     cy.get('.country-card').first().click()
         .url().should('eq', 'http://localhost:3000/2023/AD')
 
-    cy.visit('http://localhost:3000')
-      .get('.country-card').last().click()
-      .url().should('eq', 'http://localhost:3000/2023/ZW')
+    cy.intercept('GET', 'https://date.nager.at/api/v3/PublicHolidays/2023/ZW', {
+        statusCode: 200,
+    })
+        cy.visit('http://localhost:3000')
+        .get('.country-card').last().click()
+        .url().should('eq', 'http://localhost:3000/2023/ZW')
   })
 
   it('should display an error message for 500 error', () => {
