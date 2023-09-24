@@ -11,10 +11,6 @@ describe('selected country page user flow', () => {
         fixture: "AD"
         }).as('Andorra')
 
-        cy.intercept('GET', 'https://date.nager.at/api/v3/PublicHolidays/2023/ZW', {
-        statusCode: 200,
-        fixture: "ZW"
-        }).as('Zimbabwe')
     })
 
     it('should get Andorra and show the header', () => {
@@ -55,7 +51,7 @@ describe('selected country page user flow', () => {
 
     })
 
-    it('add tracked with button', () => {
+    it('should add tracked with button and show tracked/remove images and also click it to show the add image again', () => {
         cy.wait(['@countriesData'])
         cy.get('.country-card').first().click()
         cy.wait(['@Andorra'])
