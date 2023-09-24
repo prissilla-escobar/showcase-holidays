@@ -6,7 +6,7 @@ function Error({ resetError, message }) {
     
     return (
         <div className='error-message'>
-            <img className="error-photo" src='https://images.wagwalkingweb.com/media/daily_wag/blog_articles/hero/1667345491.5716999/how-to-travel-with-a-dog-on-a-plane.png' />
+            <img className="error-photo" src='https://images.wagwalkingweb.com/media/daily_wag/blog_articles/hero/1667345491.5716999/how-to-travel-with-a-dog-on-a-plane.png' alt="an image of a weiner dog in an airport with a plane ticket in his mouth and a tiny red and green plaid luggage next to him" />
             <h2 className='oh-no'>OH NO!</h2>
             <h2 className='message'>
                 {!message 

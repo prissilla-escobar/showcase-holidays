@@ -1,5 +1,5 @@
 import './App.css'
-import { getCountries, getCountryHolidays } from './api'
+import { getCountries } from './api'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import AllCountries from './Components/AllCountries/AllCountries'

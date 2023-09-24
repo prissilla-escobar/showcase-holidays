@@ -30,7 +30,7 @@ function TrackedHolidays({ trackedHolidays, countries, removeTracked }) {
     if (trackedHolidays.length === 0) {
       return (
         <div className='no-tracked'>
-          <h2 className='no-tracked-text'>You do not have any trackedHolidays.</h2>
+          <h2 className='no-tracked-text'>You do not have any tracked holidays.</h2>
         </div>
       )
     } else {
