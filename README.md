@@ -6,10 +6,10 @@ Easily view public holidays from 110 countries! Add holidays to your tracked pag
 [Holidays Around the World](https://showcase-holidays.vercel.app/)
 
 
-## Features
+<!-- ## Features
 
 ![Explore and Track Holidays Around the World](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzN0bGFwdHA0N2RwdmhvemtjZGM1dDM2YzJlanE3cXE3ejVkaml5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EZ5mCzmcWdU6TQYaJI/giphy.gif)
-![Error Handling](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa29vaHdmcHZ4azBkbjFvdXowMm54OTNnOWd0cmdzaGVwN2tvMDFyZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RHffgytZuh97hDikI4/giphy.gif)
+![Error Handling](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa29vaHdmcHZ4azBkbjFvdXowMm54OTNnOWd0cmdzaGVwN2tvMDFyZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RHffgytZuh97hDikI4/giphy.gif) -->
 
 
 - **110 Countries**: Browse through 110 countries and all of their public holidays.
@@ -22,6 +22,12 @@ Easily view public holidays from 110 countries! Add holidays to your tracked pag
 - Node.js v14 or newer
 - TypeScript v4 or newer
 - An internet connection for fetching team data.
+
+## Technologies
+- React
+- JSX
+- Router
+- Cypress
 
 ## Testing
 
